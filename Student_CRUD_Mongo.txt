@@ -1,0 +1,387 @@
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use Student_db
+switched to db Student_db
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> db.Student.insertOne({roll_no:3321,name:"Gayatri",class:"1st",marks:560,address:"Chopda",Div:"A"})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("619bd94158b7f12148f4b227")
+}
+> show dbs
+Student_db  0.000GB
+admin       0.000GB
+config      0.000GB
+local       0.000GB
+> db
+Student_db
+> show collections
+Student
+> db.Student.find()
+{ "_id" : ObjectId("619bd94158b7f12148f4b227"), "roll_no" : 3321, "name" : "Gayatri", "class" : "1st", "marks" : 560, "address" : "Chopda", "Div" : "A" }
+> db.Student.find().pretty()
+{
+        "_id" : ObjectId("619bd94158b7f12148f4b227"),
+        "roll_no" : 3321,
+        "name" : "Gayatri",
+        "class" : "1st",
+        "marks" : 560,
+        "address" : "Chopda",
+        "Div" : "A"
+}
+> db.Student.insert([{roll_no:3322,name:"Dhiraj",class:"Distinction",marks:760,address:"Pune",Div:"B"},{roll_no:3323,name:"Suresh",class:"2nd",marks:456,address:"Nasik",Div:"C"}])
+BulkWriteResult({
+        "writeErrors" : [ ],
+        "writeConcernErrors" : [ ],
+        "nInserted" : 2,
+        "nUpserted" : 0,
+        "nMatched" : 0,
+        "nModified" : 0,
+        "nRemoved" : 0,
+        "upserted" : [ ]
+})
+> db.Student.find().pretty()
+{
+        "_id" : ObjectId("619bd94158b7f12148f4b227"),
+        "roll_no" : 3321,
+        "name" : "Gayatri",
+        "class" : "1st",
+        "marks" : 560,
+        "address" : "Chopda",
+        "Div" : "A"
+}
+{
+        "_id" : ObjectId("619bdb8758b7f12148f4b228"),
+        "roll_no" : 3322,
+        "name" : "Dhiraj",
+        "class" : "Distinction",
+        "marks" : 760,
+        "address" : "Pune",
+        "Div" : "B"
+}
+{
+        "_id" : ObjectId("619bdb8758b7f12148f4b229"),
+        "roll_no" : 3323,
+        "name" : "Suresh",
+        "class" : "2nd",
+        "marks" : 456,
+        "address" : "Nasik",
+        "Div" : "C"
+}
+> db.Student.find({Div:"A"})
+{ "_id" : ObjectId("619bd94158b7f12148f4b227"), "roll_no" : 3321, "name" : "Gayatri", "class" : "1st", "marks" : 560, "address" : "Chopda", "Div" : "A" }
+> db.Student.find({Div:"A"}).pretty()
+{
+        "_id" : ObjectId("619bd94158b7f12148f4b227"),
+        "roll_no" : 3321,
+        "name" : "Gayatri",
+        "class" : "1st",
+        "marks" : 560,
+        "address" : "Chopda",
+        "Div" : "A"
+}
+> db.Student.insert([{roll_no:3325,name:"Vimal",class:"Distinction",marks:605,address:"Pune",Div:"A"},{roll_no:3324,name:"Sharda",class:"2nd",marks:306,address:"Pune",Div:"A"}])
+BulkWriteResult({
+        "writeErrors" : [ ],
+        "writeConcernErrors" : [ ],
+        "nInserted" : 2,
+        "nUpserted" : 0,
+        "nMatched" : 0,
+        "nModified" : 0,
+        "nRemoved" : 0,
+        "upserted" : [ ]
+})
+> db.Student.find({Div:"A"}).pretty()
+{
+        "_id" : ObjectId("619bd94158b7f12148f4b227"),
+        "roll_no" : 3321,
+        "name" : "Gayatri",
+        "class" : "1st",
+        "marks" : 560,
+        "address" : "Chopda",
+        "Div" : "A"
+}
+{
+        "_id" : ObjectId("619bdc7858b7f12148f4b22a"),
+        "roll_no" : 3325,
+        "name" : "Vimal",
+        "class" : "Distinction",
+        "marks" : 605,
+        "address" : "Pune",
+        "Div" : "A"
+}
+{
+        "_id" : ObjectId("619bdc7858b7f12148f4b22b"),
+        "roll_no" : 3324,
+        "name" : "Sharda",
+        "class" : "2nd",
+        "marks" : 306,
+        "address" : "Pune",
+        "Div" : "A"
+}
+> db.Student.find().pretty()
+{
+        "_id" : ObjectId("619bd94158b7f12148f4b227"),
+        "roll_no" : 3321,
+        "name" : "Gayatri",
+        "class" : "1st",
+        "marks" : 560,
+        "address" : "Chopda",
+        "Div" : "A"
+}
+{
+        "_id" : ObjectId("619bdb8758b7f12148f4b228"),
+        "roll_no" : 3322,
+        "name" : "Dhiraj",
+        "class" : "Distinction",
+        "marks" : 760,
+        "address" : "Pune",
+        "Div" : "B"
+}
+{
+        "_id" : ObjectId("619bdb8758b7f12148f4b229"),
+        "roll_no" : 3323,
+        "name" : "Suresh",
+        "class" : "2nd",
+        "marks" : 456,
+        "address" : "Nasik",
+        "Div" : "C"
+}
+{
+        "_id" : ObjectId("619bdc7858b7f12148f4b22a"),
+        "roll_no" : 3325,
+        "name" : "Vimal",
+        "class" : "Distinction",
+        "marks" : 605,
+        "address" : "Pune",
+        "Div" : "A"
+}
+{
+        "_id" : ObjectId("619bdc7858b7f12148f4b22b"),
+        "roll_no" : 3324,
+        "name" : "Sharda",
+        "class" : "2nd",
+        "marks" : 306,
+        "address" : "Pune",
+        "Div" : "A"
+}
+> db.Student.find({roll_no:3322}).pretty()
+{
+        "_id" : ObjectId("619bdb8758b7f12148f4b228"),
+        "roll_no" : 3322,
+        "name" : "Dhiraj",
+        "class" : "Distinction",
+        "marks" : 760,
+        "address" : "Pune",
+        "Div" : "B"
+}
+> db.Student.find({class:"1st"}).sort({name:1})
+{ "_id" : ObjectId("619bd94158b7f12148f4b227"), "roll_no" : 3321, "name" : "Gayatri", "class" : "1st", "marks" : 560, "address" : "Chopda", "Div" : "A" }
+> db.Student.find({Div:"A"}).sort({name:1}).pretty()
+{
+        "_id" : ObjectId("619bd94158b7f12148f4b227"),
+        "roll_no" : 3321,
+        "name" : "Gayatri",
+        "class" : "1st",
+        "marks" : 560,
+        "address" : "Chopda",
+        "Div" : "A"
+}
+{
+        "_id" : ObjectId("619bdc7858b7f12148f4b22b"),
+        "roll_no" : 3324,
+        "name" : "Sharda",
+        "class" : "2nd",
+        "marks" : 306,
+        "address" : "Pune",
+        "Div" : "A"
+}
+{
+        "_id" : ObjectId("619bdc7858b7f12148f4b22a"),
+        "roll_no" : 3325,
+        "name" : "Vimal",
+        "class" : "Distinction",
+        "marks" : 605,
+        "address" : "Pune",
+        "Div" : "A"
+}
+> db.Student.find({Div:"A"}).sort({name:-1}).pretty()
+{
+        "_id" : ObjectId("619bdc7858b7f12148f4b22a"),
+        "roll_no" : 3325,
+        "name" : "Vimal",
+        "class" : "Distinction",
+        "marks" : 605,
+        "address" : "Pune",
+        "Div" : "A"
+}
+{
+        "_id" : ObjectId("619bdc7858b7f12148f4b22b"),
+        "roll_no" : 3324,
+        "name" : "Sharda",
+        "class" : "2nd",
+        "marks" : 306,
+        "address" : "Pune",
+        "Div" : "A"
+}
+{
+        "_id" : ObjectId("619bd94158b7f12148f4b227"),
+        "roll_no" : 3321,
+        "name" : "Gayatri",
+        "class" : "1st",
+        "marks" : 560,
+        "address" : "Chopda",
+        "Div" : "A"
+}
+> db.Student.count()
+5
+> db.Student.distinct("Div")
+[ "A", "B", "C" ]
+> db.Student.update({marks:{$gt:500}},{$set:{class:"Distinction"}},{multi:true})
+WriteResult({ "nMatched" : 3, "nUpserted" : 0, "nModified" : 1 })
+> db.Student.find().pretty()
+{
+        "_id" : ObjectId("619bd94158b7f12148f4b227"),
+        "roll_no" : 3321,
+        "name" : "Gayatri",
+        "class" : "Distinction",
+        "marks" : 560,
+        "address" : "Chopda",
+        "Div" : "A"
+}
+{
+        "_id" : ObjectId("619bdb8758b7f12148f4b228"),
+        "roll_no" : 3322,
+        "name" : "Dhiraj",
+        "class" : "Distinction",
+        "marks" : 760,
+        "address" : "Pune",
+        "Div" : "B"
+}
+{
+        "_id" : ObjectId("619bdb8758b7f12148f4b229"),
+        "roll_no" : 3323,
+        "name" : "Suresh",
+        "class" : "2nd",
+        "marks" : 456,
+        "address" : "Nasik",
+        "Div" : "C"
+}
+{
+        "_id" : ObjectId("619bdc7858b7f12148f4b22a"),
+        "roll_no" : 3325,
+        "name" : "Vimal",
+        "class" : "Distinction",
+        "marks" : 605,
+        "address" : "Pune",
+        "Div" : "A"
+}
+{
+        "_id" : ObjectId("619bdc7858b7f12148f4b22b"),
+        "roll_no" : 3324,
+        "name" : "Sharda",
+        "class" : "2nd",
+        "marks" : 306,
+        "address" : "Pune",
+        "Div" : "A"
+}
+> db.Student.remove({roll_no:3322})
+WriteResult({ "nRemoved" : 1 })
+> db.Student.find().pretty()
+{
+        "_id" : ObjectId("619bd94158b7f12148f4b227"),
+        "roll_no" : 3321,
+        "name" : "Gayatri",
+        "class" : "Distinction",
+        "marks" : 560,
+        "address" : "Chopda",
+        "Div" : "A"
+}
+{
+        "_id" : ObjectId("619bdb8758b7f12148f4b229"),
+        "roll_no" : 3323,
+        "name" : "Suresh",
+        "class" : "2nd",
+        "marks" : 456,
+        "address" : "Nasik",
+        "Div" : "C"
+}
+{
+        "_id" : ObjectId("619bdc7858b7f12148f4b22a"),
+        "roll_no" : 3325,
+        "name" : "Vimal",
+        "class" : "Distinction",
+        "marks" : 605,
+        "address" : "Pune",
+        "Div" : "A"
+}
+{
+        "_id" : ObjectId("619bdc7858b7f12148f4b22b"),
+        "roll_no" : 3324,
+        "name" : "Sharda",
+        "class" : "2nd",
+        "marks" : 306,
+        "address" : "Pune",
+        "Div" : "A"
+}
+> db.Student.update({},{$set:{dep:"Comp"}},{multi:true})
+WriteResult({ "nMatched" : 4, "nUpserted" : 0, "nModified" : 4 })
+> db.Student.find().pretty()
+{
+        "_id" : ObjectId("619bd94158b7f12148f4b227"),
+        "roll_no" : 3321,
+        "name" : "Gayatri",
+        "class" : "Distinction",
+        "marks" : 560,
+        "address" : "Chopda",
+        "Div" : "A",
+        "dep" : "Comp"
+}
+{
+        "_id" : ObjectId("619bdb8758b7f12148f4b229"),
+        "roll_no" : 3323,
+        "name" : "Suresh",
+        "class" : "2nd",
+        "marks" : 456,
+        "address" : "Nasik",
+        "Div" : "C",
+        "dep" : "Comp"
+}
+{
+        "_id" : ObjectId("619bdc7858b7f12148f4b22a"),
+        "roll_no" : 3325,
+        "name" : "Vimal",
+        "class" : "Distinction",
+        "marks" : 605,
+        "address" : "Pune",
+        "Div" : "A",
+        "dep" : "Comp"
+}
+{
+        "_id" : ObjectId("619bdc7858b7f12148f4b22b"),
+        "roll_no" : 3324,
+        "name" : "Sharda",
+        "class" : "2nd",
+        "marks" : 306,
+        "address" : "Pune",
+        "Div" : "A",
+        "dep" : "Comp"
+}
+> db.Student.drop()
+true
+> db.Student.find().pretty()
+> db
+Student_db
+> Collections
+uncaught exception: ReferenceError: Collections is not defined :
+@(shell):1:1
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+>

@@ -1,0 +1,85 @@
+1.Finding the Average of Marks of students Division wise
+>  db.Student.aggregate({$group:{_id:"$Div",AvgMarks:{$avg:"$marks"}}})
+{ "_id" : "A", "AvgMarks" : 490.3333333333333 }
+{ "_id" : "C", "AvgMarks" : 405.75 }
+{ "_id" : "B", "AvgMarks" : 735 }
+
+2.Count the number of student in each division
+> db.Student.aggregate({$group:{_id:"$Div",NumberOfStudent:{$sum:1}}})
+{ "_id" : "C", "NumberOfStudent" : 4 }
+{ "_id" : "A", "NumberOfStudent" : 3 }
+{ "_id" : "B", "NumberOfStudent" : 2 }
+
+3.Display the Roll number,name and class of student.
+> db.Student.find({},{_id:0,roll_no:1,name:1,class:1})
+{ "roll_no" : 3321, "name" : "Gayatri", "class" : "1st" }
+{ "roll_no" : 3322, "name" : "Dhiraj", "class" : "Distinction" }
+{ "roll_no" : 3323, "name" : "Suresh", "class" : "2nd" }
+{ "roll_no" : 3325, "name" : "Vimal", "class" : "Distinction" }
+{ "roll_no" : 3324, "name" : "Sharda", "class" : "2nd" }
+{ "roll_no" : 3332, "name" : "Rutuja", "class" : "Distinction" }
+{ "roll_no" : 3345, "name" : "Shankar", "class" : "1nd" }
+{ "roll_no" : 3382, "name" : "Sangita", "class" : "1st" }
+{ "roll_no" : 3302, "name" : "Shreya", "class" : "2nd" }
+
+4.Number of student from pune divisionwise
+> db.Student.aggregate([{$match:{address:"Pune"}},{$group:{_id:"$Div",NoOfStudent:{$sum:1}}}])
+{ "_id" : "A", "NoOfStudent" : 2 }
+{ "_id" : "C", "NoOfStudent" : 1 }
+{ "_id" : "B", "NoOfStudent" : 2 }
+
+5.Show the First 3 students with highest marks
+> db.Student.aggregate({$sort:{marks:-1}},{$limit:3}).pretty()
+{
+        "_id" : ObjectId("61ac9ec15be8e483538fb7a9"),
+        "roll_no" : 3322,
+        "name" : "Dhiraj",
+        "class" : "Distinction",
+        "marks" : 760,
+        "address" : "Pune",
+        "Div" : "B"
+}
+{
+        "_id" : ObjectId("61aca2e05be8e483538fb7ad"),
+        "roll_no" : 3332,
+        "name" : "Rutuja",
+        "class" : "Distinction",
+        "marks" : 710,
+        "address" : "Pune",
+        "Div" : "B"
+}
+{
+        "_id" : ObjectId("61ac9ed35be8e483538fb7ab"),
+        "roll_no" : 3325,
+        "name" : "Vimal",
+        "class" : "Distinction",
+        "marks" : 605,
+        "address" : "Pune",
+        "Div" : "A"
+}
+
+6.Display list of student in "A" div in descending order of marks.
+> db.Student.aggregate([{$sort:{marks:-1}},{$match:{Div:"A"}},{$project:{"name":1,"marks":1,_id:0,"Div":1}}])
+{ "name" : "Vimal", "marks" : 605, "Div" : "A" }
+{ "name" : "Gayatri", "marks" : 560, "Div" : "A" }
+{ "name" : "Sharda", "marks" : 306, "Div" : "A" }
+
+7.MapReduce 
+> var mapper=function(){emit(this.class,1);};
+> var reducer=function(key,emits) {return Array.sum(emits); };
+> db.Student.mapReduce(mapper,reducer,{out:"result"});
+{ "result" : "result", "ok" : 1 }
+> db.result.find()
+{ "_id" : "2nd", "value" : 3 }
+{ "_id" : "1nd", "value" : 1 }
+{ "_id" : "Distinction", "value" : 3 }
+{ "_id" : "1st", "value" : 2 }
+
+> var mapper=function(){emit(this.Div,this.marks);};
+> var reducer=function(Div,marks) {return Array.avg(marks); };
+> db.Student.mapReduce(mapper,reducer,{out:"result"});
+{ "result" : "result", "ok" : 1 }
+> db.result.find()
+{ "_id" : "C", "value" : 405.75 }
+{ "_id" : "B", "value" : 735 }
+{ "_id" : "A", "value" : 490.3333333333333 }

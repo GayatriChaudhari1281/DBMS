@@ -1,0 +1,65 @@
+Assignment 5:
+Aim: To implement the DB Triggers
+
+1. Write a trigger which will convert the Book_Name to upper-case before inserting a new record in Teachers table. 
+mysql> delimiter //
+mysql> create trigger Uppercase before insert on staff for each row
+    -> BEGIN
+    -> set NEW.Staff_name=UPPER(NEW.Staff_name);
+    -> END;
+    -> //
+
+mysql> insert into staff values(1012,"Sharda Chaudhari","Pune","Female");
+    -> //
+Query OK, 1 row affected (0.19 sec)
+
+mysql> select * from staff;
+    -> //
++----------+---------------------+---------------+--------------+
+| staff_id | staff_name          | staff_address | staff_gender |
++----------+---------------------+---------------+--------------+
+|      201 | Nilofer Attar       | Pune          | Female       |
+|      202 | Mahendra deore      | Banglore      | Male         |
+|      203 | Madhuri Tasgonkar   | Mumbai        | Female       |
+|      204 | Vikas Hajare        | Narayangaon   | Male         |
+|      205 | Supriya Kelkar      | Indore        | Female       |
+|      206 | Aparna Hajare       | Jalgaon       | Female       |
+|      207 | Pooja Deshmukh      | Hydrabaad     | Female       |
+|      208 | Chhaya Gosavi       | Mysore        | Female       |
+|      209 | Prakash Date        | Chandrapur    | Male         |
+|      210 | Neha Deshpande      | Aurangabaad   | Female       |
+|      211 | Yogini Kulkarni     | Soygaon       | female       |
+|      212 | Aashutosh Muchrikar | Ooty          | Male         |
+|      213 | Narayan Murti       | Pune          | Male         |
+|      214 | Shilpa Pant         | Kolkata       | Female       |
+|      215 | Atharva Patil       | Pune          | Female       |
+|      216 | Manisha Patil       | Pune          | Female       |
+|     1012 | SHARDA CHAUDHARI    | Pune          | Female       |
++----------+---------------------+---------------+--------------+
+17 rows in set (0.00 sec)
+Query OK, 0 rows affected (0.24 sec)
+
+2. Create table: Ex_bookrecord( Book_id (pk), bookname, bookauthor, bookpub, bookcost, DOPub). Write a trigger which will add the book record to the Ex_bookrecord table when it is deleted from the books table
+
+mysql> create table Ex_bookrecord (book_id int,bookname varchar(30),bookauthor varchar(30),bookpub varchar(30),bookcost float(8,2),DOPub date);
+    -> //
+Query OK, 0 rows affected, 1 warning (0.04 sec)
+
+mysql> create trigger addbook after delete on books for each row
+    -> BEGIN
+    -> insert into Ex_bookrecord values(old.book_id,old.bookname,old.bookauthor,old.bookpub,old.bookcost,old.DOPub);
+    -> end
+    -> //
+Query OK, 0 rows affected (0.03 sec)
+
+mysql>  delete from  books where book_id=1003;//
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from Ex_bookrecord;
+    -> //
++---------+-----------------+-------------+--------------+----------+------------+
+| book_id | bookname        | bookauthor  | bookpub      | bookcost | DOPub      |
++---------+-----------------+-------------+--------------+----------+------------+
+|    1003 | C++ Programming | Sudha Murti | Mc-Graw Hill |   450.00 | 2021-09-23 |
++---------+-----------------+-------------+--------------+----------+------------+
+1 row in set (0.00 sec)

@@ -1,0 +1,277 @@
+1. Display only the city name & its population for all the cities in state “WV”
+> db.cities.find({state:"WV"},{city:1,pop:1,_id:0})
+{ "city" : "HUNTINGTON", "pop" : 18311 }
+{ "city" : "HUNTINGTON", "pop" : 22276 }
+{ "city" : "BECKLEY", "pop" : 45196 }
+{ "city" : "AMIGO", "pop" : 684 }
+{ "city" : "ANSTED", "pop" : 1451 }
+
+2. Count the number of cities in each state.
+> db.cities.aggregate({$group:{_id:"$state",NumberofCities:{$sum:1}}})
+{ "_id" : "NY", "NumberofCities" : 5 }
+{ "_id" : "VT", "NumberofCities" : 5 }
+{ "_id" : "NJ", "NumberofCities" : 5 }
+{ "_id" : "CT", "NumberofCities" : 5 }
+{ "_id" : "MA", "NumberofCities" : 14 }
+{ "_id" : "CO", "NumberofCities" : 6 }
+{ "_id" : "NH", "NumberofCities" : 5 }
+{ "_id" : "RI", "NumberofCities" : 12 }
+{ "_id" : "ME", "NumberofCities" : 10 }
+{ "_id" : "NC", "NumberofCities" : 5 }
+{ "_id" : "WV", "NumberofCities" : 5 }
+{ "_id" : "FL", "NumberofCities" : 5 }
+{ "_id" : "NE", "NumberofCities" : 5 }
+{ "_id" : "SC", "NumberofCities" : 5 }
+{ "_id" : "MO", "NumberofCities" : 6 }
+{ "_id" : "IL", "NumberofCities" : 5 }
+{ "_id" : "GA", "NumberofCities" : 5 }
+{ "_id" : "PA", "NumberofCities" : 5 }
+{ "_id" : "AL", "NumberofCities" : 5 }
+{ "_id" : "VA", "NumberofCities" : 6 }
+Type "it" for more
+> it
+{ "_id" : "TN", "NumberofCities" : 5 }
+{ "_id" : "MD", "NumberofCities" : 5 }
+{ "_id" : "MS", "NumberofCities" : 5 }
+{ "_id" : "KY", "NumberofCities" : 5 }
+
+3. Display the names of top 10 cities with largest population along with state name.
+
+> db.cities.aggregate({$sort:{pop:-1}},{$limit:10})
+{ "_id" : "07111", "city" : "IRVINGTON", "loc" : [ -74.231271, 40.7261 ], "pop" : 60986, "state" : "NJ" }
+{ "_id" : "21222", "city" : "DUNDALK SPARROWS", "loc" : [ -76.502484, 39.26486 ], "pop" : 58181, "state" : "MD" }
+{ "_id" : "21224", "city" : "BALTIMORE", "loc" : [ -76.556831, 39.287558 ], "pop" : 53629, "state" : "MD" }
+{ "_id" : "25801", "city" : "BECKLEY", "loc" : [ -81.206084, 37.793214 ], "pop" : 45196, "state" : "WV" }
+{ "_id" : "21221", "city" : "ESSEX", "loc" : [ -76.453259, 39.308553 ], "pop" : 44117, "state" : "MD" }
+{ "_id" : "31206", "city" : "WILSON AIRPORT", "loc" : [ -83.682303, 32.780758 ], "pop" : 42528, "state" : "GA" }
+{ "_id" : "04240", "city" : "LEWISTON", "loc" : [ -70.191619, 44.098538 ], "pop" : 40173, "state" : "ME" }
+{ "_id" : "21223", "city" : "BALTIMORE", "loc" : [ -76.647586, 39.287 ], "pop" : 39003, "state" : "MD" }
+{ "_id" : "31204", "city" : "MACON", "loc" : [ -83.676634, 32.842393 ], "pop" : 38186, "state" : "GA" }
+{ "_id" : "21220", "city" : "MIDDLE RIVER", "loc" : [ -76.415255, 39.340098 ], "pop" : 37336, "state" : "MD" }
+
+
+
+4. Display the name of state and its average population.
+> db.cities.aggregate({$group:{_id:"$state",pop:{$avg:"pop"}}})
+{ "_id" : "NY", "pop" : null }
+{ "_id" : "VT", "pop" : null }
+{ "_id" : "NJ", "pop" : null }
+{ "_id" : "CT", "pop" : null }
+{ "_id" : "MA", "pop" : null }
+{ "_id" : "CO", "pop" : null }
+{ "_id" : "NH", "pop" : null }
+{ "_id" : "RI", "pop" : null }
+{ "_id" : "ME", "pop" : null }
+{ "_id" : "NC", "pop" : null }
+{ "_id" : "WV", "pop" : null }
+{ "_id" : "FL", "pop" : null }
+{ "_id" : "NE", "pop" : null }
+{ "_id" : "SC", "pop" : null }
+{ "_id" : "MO", "pop" : null }
+{ "_id" : "IL", "pop" : null }
+{ "_id" : "GA", "pop" : null }
+{ "_id" : "PA", "pop" : null }
+{ "_id" : "AL", "pop" : null }
+{ "_id" : "VA", "pop" : null }
+Type "it" for more
+> db.cities.aggregate({$group:{_id:"$state",pop:{$avg:"$pop"}}})
+{ "_id" : "NY", "pop" : 12583.4 }
+{ "_id" : "VT", "pop" : 672.2 }
+{ "_id" : "NJ", "pop" : 30973.8 }
+{ "_id" : "CT", "pop" : 17871.2 }
+{ "_id" : "MA", "pop" : 11614.785714285714 }
+{ "_id" : "CO", "pop" : 3776.8333333333335 }
+{ "_id" : "NH", "pop" : 3461.4 }
+{ "_id" : "RI", "pop" : 9012 }
+{ "_id" : "ME", "pop" : 7888.5 }
+{ "_id" : "NC", "pop" : 21162.4 }
+{ "_id" : "WV", "pop" : 17583.6 }
+{ "_id" : "FL", "pop" : 2709.6 }
+{ "_id" : "NE", "pop" : 8334.2 }
+{ "_id" : "SC", "pop" : 9479.4 }
+{ "_id" : "MO", "pop" : 1866.6666666666667 }
+{ "_id" : "IL", "pop" : 1538.4 }
+{ "_id" : "GA", "pop" : 29415.8 }
+{ "_id" : "PA", "pop" : 6467.2 }
+{ "_id" : "AL", "pop" : 3183.6 }
+{ "_id" : "VA", "pop" : 14082.166666666666 }
+Type "it" for more
+> it
+{ "_id" : "TN", "pop" : 3356.8 }
+{ "_id" : "MD", "pop" : 46453.2 }
+{ "_id" : "MS", "pop" : 8955.4 }
+{ "_id" : "KY", "pop" : 1326.6 }
+
+5. Display cityname and population of first 3 cities of state of MH with highest population> 
+
+> db.cities.aggregate([{$sort:{pop:-1}},{$match:{state:"MA"}},{$limit:3}])
+{ "_id" : "01701", "city" : "FRAMINGHAM", "loc" : [ -71.425486, 42.300665 ], "pop" : 65046, "state" : "MA" }
+{ "_id" : "02401", "city" : "BROCKTON", "loc" : [ -71.034348, 42.081571 ], "pop" : 59498, "state" : "MA" }
+{ "_id" : "02154", "city" : "NORTH WALTHAM", "loc" : [ -71.236497, 42.382492 ], "pop" : 57871, "state" : "MA" }
+
+
+db.cities.find({"state":"MA"},{"city":1,"pop":1}).sort({"pop":-1}).limit(3)
+{ "_id" : "01002", "city" : "CUSHMAN", "pop" : 36963 }
+{ "_id" : "01020", "city" : "CHICOPEE", "pop" : 31495 }
+{ "_id" : "01013", "city" : "CHICOPEE", "pop" : 23396 }
+
+
+6. Display list of all cities in “CT” state in descending order of population.
+> db.cities.aggregate([{$sort:{pop:-1}},{$match:{state:"CT"}},{$project:{"city":1,pop:1,_id:0}}])
+{ "city" : "BRISTOL", "pop" : 60670 }
+{ "city" : "BLOOMFIELD", "pop" : 19524 }
+{ "city" : "AVON", "pop" : 13988 }
+{ "city" : "BURLINGTON", "pop" : 7017 }
+{ "city" : "WINDSORVILLE", "pop" : 5067 }
+{ "city" : "COLLINSVILLE", "pop" : 4630 }
+{ "city" : "CANTON", "pop" : 4125 }
+{ "city" : "CANAAN", "pop" : 2948 }
+{ "city" : "COLEBROOK", "pop" : 203 }
+{ "city" : "CANTON CENTER", "pop" : 192 }
+
+
+7. Map-reduce function to find the different keys(ie fields like cityname, pop, state
+etc) in the collection and count its occurrence
+
+> var mapper=function() { emit(this.state,1); };
+> var reducer=function(key,emits) { return Array.sum(emits); };
+> db.cities.mapReduce(mapper,reducer,{out:"result"});
+{ "result" : "result", "ok" : 1 }
+> db.result.find()
+{ "_id" : "MI", "value" : 9 }
+{ "_id" : "SD", "value" : 8 }
+{ "_id" : "IN", "value" : 6 }
+{ "_id" : "TX", "value" : 5 }
+{ "_id" : "ID", "value" : 6 }
+{ "_id" : "MT", "value" : 7 }
+{ "_id" : "UT", "value" : 6 }
+{ "_id" : "AZ", "value" : 7 }
+{ "_id" : "NV", "value" : 8 }
+{ "_id" : "WI", "value" : 8 }
+{ "_id" : "OK", "value" : 8 }
+{ "_id" : "HI", "value" : 5 }
+{ "_id" : "VT", "value" : 7 }
+{ "_id" : "GA", "value" : 9 }
+{ "_id" : "CO", "value" : 7 }
+{ "_id" : "AL", "value" : 9 }
+{ "_id" : "FL", "value" : 9 }
+{ "_id" : "MO", "value" : 7 }
+{ "_id" : "WY", "value" : 6 }
+{ "_id" : "CA", "value" : 8 }
+Type "it" for more
+> var mapper=function() { emit(this.city,1); };
+> var reducer=function(key,emits) { return Array.sum(emits); };
+> db.cities.mapReduce(mapper,reducer,{out:"result"});
+{ "result" : "result", "ok" : 1 }
+> db.result.find()
+{ "_id" : "DENNIS", "value" : 1 }
+{ "_id" : "NEWTONVILLE", "value" : 4 }
+{ "_id" : "WEST STOCKBRIDGE", "value" : 1 }
+{ "_id" : "FOXBORO", "value" : 1 }
+{ "_id" : "WEST ROXBURY", "value" : 1 }
+{ "_id" : "LEXINGTON", "value" : 2 }
+{ "_id" : "MENDON", "value" : 1 }
+{ "_id" : "EDGARTOWN", "value" : 1 }
+{ "_id" : "NEW BEDFORD", "value" : 4 }
+{ "_id" : "SUMMITVILLE", "value" : 1 }
+{ "_id" : "MORAN", "value" : 1 }
+{ "_id" : "AYER", "value" : 1 }
+{ "_id" : "LEOMINSTER", "value" : 1 }
+{ "_id" : "LOWDEN", "value" : 1 }
+{ "_id" : "BARNSTABLE", "value" : 1 }
+{ "_id" : "MARSHFIELD", "value" : 1 }
+{ "_id" : "PITTSFIELD", "value" : 1 }
+{ "_id" : "HAYDENVILLE", "value" : 1 }
+{ "_id" : "SHIRLEY CENTER", "value" : 1 }
+{ "_id" : "RIDGE SPRING", "value" : 1 }
+Type "it" for more
+
+> var mapper=function() { emit(this.pop,1); };
+> var reducer=function(key,emits) { return Array.sum(emits); };
+> db.cities.mapReduce(mapper,reducer,{out:"result"});
+{ "result" : "result", "ok" : 1 }
+> db.result.find()
+{ "_id" : 833, "value" : 1 }
+{ "_id" : 27537, "value" : 1 }
+{ "_id" : 467, "value" : 1 }
+{ "_id" : 89, "value" : 1 }
+{ "_id" : 2138, "value" : 1 }
+{ "_id" : 3674, "value" : 1 }
+{ "_id" : 19971, "value" : 1 }
+{ "_id" : 24260, "value" : 1 }
+{ "_id" : 3710, "value" : 1 }
+{ "_id" : 1776, "value" : 2 }
+{ "_id" : 55778, "value" : 1 }
+{ "_id" : 687, "value" : 1 }
+{ "_id" : 16939, "value" : 1 }
+{ "_id" : 29887, "value" : 1 }
+{ "_id" : 440, "value" : 1 }
+{ "_id" : 1732, "value" : 1 }
+{ "_id" : 16, "value" : 1 }
+{ "_id" : 22445, "value" : 1 }
+{ "_id" : 12534, "value" : 1 }
+{ "_id" : 10579, "value" : 1 }
+Type "it" for more
+
+
+Avg pop statewise
+
+> var mapper=function() { emit(this.state,this.pop); };
+> var reducer=function(state,pop) { return Array.avg(pop); };
+> db.cities.mapReduce(mapper,reducer,{out:"result"});
+{ "result" : "result", "ok" : 1 }
+> db.result.find()
+{ "_id" : "AL", "value" : 9142.111111111111 }
+{ "_id" : "CO", "value" : 32570 }
+{ "_id" : "GA", "value" : 24707.666666666668 }
+{ "_id" : "VT", "value" : 550.5714285714286 }
+{ "_id" : "WY", "value" : 2558 }
+{ "_id" : "WA", "value" : 6683.888888888889 }
+{ "_id" : "CA", "value" : 40573.625 }
+{ "_id" : "FL", "value" : 9639.111111111111 }
+{ "_id" : "MO", "value" : 7710.714285714285 }
+{ "_id" : "CT", "value" : 11836.4 }
+{ "_id" : "AR", "value" : 2324.3333333333335 }
+{ "_id" : "ND", "value" : 1288.4285714285713 }
+{ "_id" : "NJ", "value" : 25207 }
+{ "_id" : "NY", "value" : 51189.27272727273 }
+{ "_id" : "KS", "value" : 6859.222222222223 }
+{ "_id" : "IN", "value" : 5281.166666666667 }
+{ "_id" : "SD", "value" : 1997.625 }
+{ "_id" : "AK", "value" : 18811 }
+{ "_id" : "MT", "value" : 2603.8571428571427 }
+{ "_id" : "UT", "value" : 5060.166666666667 }
+Type "it" for more
+> it
+{ "_id" : "AZ", "value" : 31481.714285714286 }
+{ "_id" : "OK", "value" : 3786.125 }
+{ "_id" : "WI", "value" : 5175 }
+{ "_id" : "NV", "value" : 35569 }
+{ "_id" : "IA", "value" : 1972.5555555555557 }
+{ "_id" : "HI", "value" : 33937.2 }
+{ "_id" : "KY", "value" : 4126.75 }
+{ "_id" : "MS", "value" : 6109.222222222223 }
+{ "_id" : "IL", "value" : 18525.428571428572 }
+{ "_id" : "TN", "value" : 12520.444444444445 }
+{ "_id" : "MA", "value" : 12777.478540772532 }
+{ "_id" : "SC", "value" : 3531.5555555555557 }
+{ "_id" : "TX", "value" : 3524.8 }
+{ "_id" : "MI", "value" : 30945 }
+{ "_id" : "OH", "value" : 14209.375 }
+{ "_id" : "DE", "value" : 5720.933333333333 }
+{ "_id" : "WV", "value" : 552.1 }
+{ "_id" : "NE", "value" : 2673.714285714286 }
+{ "_id" : "VA", "value" : 23911.75 }
+{ "_id" : "ID", "value" : 2118.5 }
+Type "it" for more
+> it
+{ "_id" : "NH", "value" : 17543.7 }
+{ "_id" : "MN", "value" : 5634.4 }
+{ "_id" : "ME", "value" : 4105.333333333333 }
+{ "_id" : "PA", "value" : 11716.785714285714 }
+{ "_id" : "MD", "value" : 5065.5 }
+{ "_id" : "RI", "value" : 7012 }
+{ "_id" : "LA", "value" : 23784 }
+{ "_id" : "NC", "value" : 9917.7 }
+{ "_id" : "NM", "value" : 27731.375 }
+{ "_id" : "OR", "value" : 19188.428571428572 }

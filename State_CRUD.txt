@@ -1,0 +1,1042 @@
+1.Display all data
+> db.cities.find()
+{ "_id" : "01001", "city" : "AGAWAM", "loc" : [ -72.622739, 42.070206 ], "pop" : 15338, "state" : "MA" }
+{ "_id" : "01002", "city" : "CUSHMAN", "loc" : [ -72.51565, 42.377017 ], "pop" : 36963, "state" : "MA" }
+{ "_id" : "01005", "city" : "BARRE", "loc" : [ -72.108354, 42.409698 ], "pop" : 4546, "state" : "MA" }
+{ "_id" : "01007", "city" : "BELCHERTOWN", "loc" : [ -72.410953, 42.275103 ], "pop" : 10579, "state" : "MA" }
+{ "_id" : "01008", "city" : "BLANDFORD", "loc" : [ -72.936114, 42.182949 ], "pop" : 1240, "state" : "MA" }
+{ "_id" : "01028", "city" : "EAST LONGMEADOW", "loc" : [ -72.505565, 42.067203 ], "pop" : 13367, "state" : "MA" }
+{ "_id" : "01030", "city" : "FEEDING HILLS", "loc" : [ -72.675077, 42.07182 ], "pop" : 11985, "state" : "MA" }
+{ "_id" : "01031", "city" : "GILBERTVILLE", "loc" : [ -72.198585, 42.332194 ], "pop" : 2385, "state" : "MA" }
+{ "_id" : "01032", "city" : "GOSHEN", "loc" : [ -72.844092, 42.466234 ], "pop" : 122, "state" : "MA" }
+{ "_id" : "01033", "city" : "GRANBY", "loc" : [ -72.520001, 42.255704 ], "pop" : 5526, "state" : "MA" }
+{ "_id" : "01034", "city" : "TOLLAND", "loc" : [ -72.908793, 42.070234 ], "pop" : 1652, "state" : "MA" }
+{ "_id" : "01035", "city" : "HADLEY", "loc" : [ -72.571499, 42.36062 ], "pop" : 4231, "state" : "MA" }
+{ "_id" : "01036", "city" : "HAMPDEN", "loc" : [ -72.431823, 42.064756 ], "pop" : 4709, "state" : "MA" }
+{ "_id" : "01038", "city" : "HATFIELD", "loc" : [ -72.616735, 42.38439 ], "pop" : 3184, "state" : "MA" }
+{ "_id" : "01039", "city" : "HAYDENVILLE", "loc" : [ -72.703178, 42.381799 ], "pop" : 1387, "state" : "MA" }
+{ "_id" : "01040", "city" : "HOLYOKE", "loc" : [ -72.626193, 42.202007 ], "pop" : 43704, "state" : "MA" }
+{ "_id" : "01050", "city" : "HUNTINGTON", "loc" : [ -72.873341, 42.265301 ], "pop" : 2084, "state" : "MA" }
+{ "_id" : "01053", "city" : "LEEDS", "loc" : [ -72.703403, 42.354292 ], "pop" : 1350, "state" : "MA" }
+{ "_id" : "01054", "city" : "LEVERETT", "loc" : [ -72.499334, 42.46823 ], "pop" : 1748, "state" : "MA" }
+{ "_id" : "01056", "city" : "LUDLOW", "loc" : [ -72.471012, 42.172823 ], "pop" : 18820, "state" : "MA" }
+Type "it" for more
+> it
+{ "_id" : "01057", "city" : "MONSON", "loc" : [ -72.319634, 42.101017 ], "pop" : 8194, "state" : "MA" }
+{ "_id" : "01060", "city" : "FLORENCE", "loc" : [ -72.654245, 42.324662 ], "pop" : 27939, "state" : "MA" }
+{ "_id" : "01068", "city" : "OAKHAM", "loc" : [ -72.051265, 42.348033 ], "pop" : 1503, "state" : "MA" }
+{ "_id" : "01069", "city" : "PALMER", "loc" : [ -72.328785, 42.176233 ], "pop" : 9778, "state" : "MA" }
+{ "_id" : "01070", "city" : "PLAINFIELD", "loc" : [ -72.918289, 42.514393 ], "pop" : 571, "state" : "MA" }
+{ "_id" : "01071", "city" : "RUSSELL", "loc" : [ -72.840343, 42.147063 ], "pop" : 608, "state" : "MA" }
+{ "_id" : "01072", "city" : "SHUTESBURY", "loc" : [ -72.421342, 42.481968 ], "pop" : 1533, "state" : "MA" }
+{ "_id" : "01073", "city" : "SOUTHAMPTON", "loc" : [ -72.719381, 42.224697 ], "pop" : 4478, "state" : "MA" }
+{ "_id" : "01075", "city" : "SOUTH HADLEY", "loc" : [ -72.581137, 42.237537 ], "pop" : 16699, "state" : "MA" }
+{ "_id" : "01077", "city" : "SOUTHWICK", "loc" : [ -72.770588, 42.051099 ], "pop" : 7667, "state" : "MA" }
+{ "_id" : "01080", "city" : "THREE RIVERS", "loc" : [ -72.362352, 42.181894 ], "pop" : 2425, "state" : "MA" }
+{ "_id" : "01081", "city" : "WALES", "loc" : [ -72.204592, 42.062734 ], "pop" : 1732, "state" : "MA" }
+{ "_id" : "01082", "city" : "WARE", "loc" : [ -72.258285, 42.261831 ], "pop" : 9808, "state" : "MA" }
+{ "_id" : "01085", "city" : "MONTGOMERY", "loc" : [ -72.754318, 42.129484 ], "pop" : 40117, "state" : "MA" }
+{ "_id" : "01089", "city" : "WEST SPRINGFIELD", "loc" : [ -72.641109, 42.115066 ], "pop" : 27537, "state" : "MA" }
+{ "_id" : "01092", "city" : "WEST WARREN", "loc" : [ -72.203639, 42.20734 ], "pop" : 4441, "state" : "MA" }
+{ "_id" : "01095", "city" : "WILBRAHAM", "loc" : [ -72.446415, 42.124506 ], "pop" : 12635, "state" : "MA" }
+{ "_id" : "01096", "city" : "WILLIAMSBURG", "loc" : [ -72.777989, 42.408522 ], "pop" : 2295, "state" : "MA" }
+{ "_id" : "01098", "city" : "WORTHINGTON", "loc" : [ -72.931427, 42.384293 ], "pop" : 877, "state" : "MA" }
+{ "_id" : "01103", "city" : "SPRINGFIELD", "loc" : [ -72.588735, 42.1029 ], "pop" : 2323, "state" : "MA" }
+Type "it" for more
+> db.cities.count()
+877
+
+2.Update the database of any city
+> db.cities.find({city:"FREMONT"})
+{ "_id" : "03044", "city" : "FREMONT", "loc" : [ -71.121836, 42.984016 ], "pop" : 12677, "state" : "NH" }
+> db.cities.update({city:"FREMONT"},{$set:{pop:23000}},{multi:true})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.cities.find({city:"FREMONT"})
+{ "_id" : "03044", "city" : "FREMONT", "loc" : [ -71.121836, 42.984016 ], "pop" : 23000, "state" : "NH" }
+
+3.Increase the population of each city in NH by 5000
+> db.cities.find({state:"NH"})
+{ "_id" : "03031", "city" : "AMHERST", "loc" : [ -71.607536, 42.856944 ], "pop" : 13998, "state" : "NH" }
+{ "_id" : "03032", "city" : "AUBURN", "loc" : [ -71.344892, 42.992529 ], "pop" : 9085, "state" : "NH" }
+{ "_id" : "03033", "city" : "BROOKLINE", "loc" : [ -71.666254, 42.738442 ], "pop" : 7410, "state" : "NH" }
+{ "_id" : "03034", "city" : "CANDIA", "loc" : [ -71.304857, 43.058514 ], "pop" : 8557, "state" : "NH" }
+{ "_id" : "03036", "city" : "CHESTER", "loc" : [ -71.244962, 42.967756 ], "pop" : 7691, "state" : "NH" }
+{ "_id" : "03037", "city" : "DEERFIELD", "loc" : [ -71.251264, 43.137756 ], "pop" : 8124, "state" : "NH" }
+{ "_id" : "03038", "city" : "DERRY", "loc" : [ -71.301971, 42.887404 ], "pop" : 34556, "state" : "NH" }
+{ "_id" : "03042", "city" : "EPPING", "loc" : [ -71.076367, 43.041052 ], "pop" : 11797, "state" : "NH" }
+{ "_id" : "03043", "city" : "FRANCESTOWN", "loc" : [ -71.81131, 42.991952 ], "pop" : 6219, "state" : "NH" }
+{ "_id" : "03044", "city" : "FREMONT", "loc" : [ -71.121836, 42.984016 ], "pop" : 7677, "state" : "NH" }
+> db.cities.update({state:"NH"},{$inc:{pop:5000}},{multi:true})
+WriteResult({ "nMatched" : 10, "nUpserted" : 0, "nModified" : 10 })
+> db.cities.find({state:"NH"})
+{ "_id" : "03031", "city" : "AMHERST", "loc" : [ -71.607536, 42.856944 ], "pop" : 18998, "state" : "NH" }
+{ "_id" : "03032", "city" : "AUBURN", "loc" : [ -71.344892, 42.992529 ], "pop" : 14085, "state" : "NH" }
+{ "_id" : "03033", "city" : "BROOKLINE", "loc" : [ -71.666254, 42.738442 ], "pop" : 12410, "state" : "NH" }
+{ "_id" : "03034", "city" : "CANDIA", "loc" : [ -71.304857, 43.058514 ], "pop" : 13557, "state" : "NH" }
+{ "_id" : "03036", "city" : "CHESTER", "loc" : [ -71.244962, 42.967756 ], "pop" : 12691, "state" : "NH" }
+{ "_id" : "03037", "city" : "DEERFIELD", "loc" : [ -71.251264, 43.137756 ], "pop" : 13124, "state" : "NH" }
+{ "_id" : "03038", "city" : "DERRY", "loc" : [ -71.301971, 42.887404 ], "pop" : 39556, "state" : "NH" }
+{ "_id" : "03042", "city" : "EPPING", "loc" : [ -71.076367, 43.041052 ], "pop" : 16797, "state" : "NH" }
+{ "_id" : "03043", "city" : "FRANCESTOWN", "loc" : [ -71.81131, 42.991952 ], "pop" : 11219, "state" : "NH" }
+{ "_id" : "03044", "city" : "FREMONT", "loc" : [ -71.121836, 42.984016 ], "pop" : 12677, "state" : "NH" }
+
+4.decrease the population of each city in RI by 2000
+> db.cities.find({state:"RI"})
+{ "_id" : "02804", "city" : "ASHAWAY", "loc" : [ -71.783745, 41.423054 ], "pop" : 2472, "state" : "RI" }
+{ "_id" : "02806", "city" : "BARRINGTON", "loc" : [ -71.317497, 41.744334 ], "pop" : 15849, "state" : "RI" }
+{ "_id" : "02807", "city" : "BLOCK ISLAND", "loc" : [ -71.574825, 41.171546 ], "pop" : 836, "state" : "RI" }
+{ "_id" : "02808", "city" : "BRADFORD", "loc" : [ -71.746453, 41.411448 ], "pop" : 2184, "state" : "RI" }
+{ "_id" : "02809", "city" : "BRISTOL", "loc" : [ -71.267558, 41.68247 ], "pop" : 21625, "state" : "RI" }
+{ "_id" : "02812", "city" : "RICHMOND", "loc" : [ -71.650279, 41.46941 ], "pop" : 1011, "state" : "RI" }
+{ "_id" : "02813", "city" : "CHARLESTOWN", "loc" : [ -71.661455, 41.400749 ], "pop" : 6663, "state" : "RI" }
+{ "_id" : "02814", "city" : "CHEPACHET", "loc" : [ -71.679483, 41.91549 ], "pop" : 8191, "state" : "RI" }
+{ "_id" : "02815", "city" : "CLAYVILLE", "loc" : [ -71.670589, 41.777762 ], "pop" : 45, "state" : "RI" }
+{ "_id" : "02816", "city" : "COVENTRY", "loc" : [ -71.576794, 41.69143 ], "pop" : 29842, "state" : "RI" }
+{ "_id" : "02817", "city" : "WEST GREENWICH", "loc" : [ -71.643549, 41.639977 ], "pop" : 3246, "state" : "RI" }
+{ "_id" : "02818", "city" : "EAST GREENWICH", "loc" : [ -71.474009, 41.649777 ], "pop" : 16180, "state" : "RI" }
+> db.cities.update({state:"RI"},{$inc:{pop:-2000}},{multi:true})
+WriteResult({ "nMatched" : 12, "nUpserted" : 0, "nModified" : 12 })
+> db.cities.find({state:"RI"})
+{ "_id" : "02804", "city" : "ASHAWAY", "loc" : [ -71.783745, 41.423054 ], "pop" : 472, "state" : "RI" }
+{ "_id" : "02806", "city" : "BARRINGTON", "loc" : [ -71.317497, 41.744334 ], "pop" : 13849, "state" : "RI" }
+{ "_id" : "02807", "city" : "BLOCK ISLAND", "loc" : [ -71.574825, 41.171546 ], "pop" : -1164, "state" : "RI" }
+{ "_id" : "02808", "city" : "BRADFORD", "loc" : [ -71.746453, 41.411448 ], "pop" : 184, "state" : "RI" }
+{ "_id" : "02809", "city" : "BRISTOL", "loc" : [ -71.267558, 41.68247 ], "pop" : 19625, "state" : "RI" }
+{ "_id" : "02812", "city" : "RICHMOND", "loc" : [ -71.650279, 41.46941 ], "pop" : -989, "state" : "RI" }
+{ "_id" : "02813", "city" : "CHARLESTOWN", "loc" : [ -71.661455, 41.400749 ], "pop" : 4663, "state" : "RI" }
+{ "_id" : "02814", "city" : "CHEPACHET", "loc" : [ -71.679483, 41.91549 ], "pop" : 6191, "state" : "RI" }
+{ "_id" : "02815", "city" : "CLAYVILLE", "loc" : [ -71.670589, 41.777762 ], "pop" : -1955, "state" : "RI" }
+{ "_id" : "02816", "city" : "COVENTRY", "loc" : [ -71.576794, 41.69143 ], "pop" : 27842, "state" : "RI" }
+{ "_id" : "02817", "city" : "WEST GREENWICH", "loc" : [ -71.643549, 41.639977 ], "pop" : 1246, "state" : "RI" }
+{ "_id" : "02818", "city" : "EAST GREENWICH", "loc" : [ -71.474009, 41.649777 ], "pop" : 14180, "state" : "RI" }
+
+5.Delete the document of any city in MD
+> db.cities.find({state:"MD"})
+{ "_id" : "20602", "city" : "SAINT CHARLES", "loc" : [ -76.903414, 38.601545 ], "pop" : 20663, "state" : "MD" }
+{ "_id" : "20603", "city" : "SAINT CHARLES", "loc" : [ -76.961154, 38.624929 ], "pop" : 11184, "state" : "MD" }
+{ "_id" : "20606", "city" : "ABELL", "loc" : [ -76.744104, 38.249554 ], "pop" : 601, "state" : "MD" }
+{ "_id" : "20607", "city" : "ACCOKEEK", "loc" : [ -77.016217, 38.671992 ], "pop" : 4043, "state" : "MD" }
+{ "_id" : "20608", "city" : "AQUASCO", "loc" : [ -76.714947, 38.582496 ], "pop" : 939, "state" : "MD" }
+{ "_id" : "20609", "city" : "AVENUE", "loc" : [ -76.746553, 38.282624 ], "pop" : 699, "state" : "MD" }
+{ "_id" : "20611", "city" : "BEL ALTON", "loc" : [ -76.978873, 38.473141 ], "pop" : 582, "state" : "MD" }
+{ "_id" : "20613", "city" : "BRANDYWINE", "loc" : [ -76.832033, 38.692203 ], "pop" : 7627, "state" : "MD" }
+{ "_id" : "20615", "city" : "BROOMES ISLAND", "loc" : [ -76.547763, 38.417963 ], "pop" : 404, "state" : "MD" }
+{ "_id" : "20616", "city" : "BRYANS ROAD", "loc" : [ -77.076589, 38.641468 ], "pop" : 3792, "state" : "MD" }
+{ "_id" : "20617", "city" : "BRYANTOWN", "loc" : [ -76.846539, 38.542638 ], "pop" : 722, "state" : "MD" }
+> db.cities.remove({city:"ABELL"})
+WriteResult({ "nRemoved" : 1 })
+> db.cities.find({state:"MD"})
+{ "_id" : "20602", "city" : "SAINT CHARLES", "loc" : [ -76.903414, 38.601545 ], "pop" : 20663, "state" : "MD" }
+{ "_id" : "20603", "city" : "SAINT CHARLES", "loc" : [ -76.961154, 38.624929 ], "pop" : 11184, "state" : "MD" }
+{ "_id" : "20607", "city" : "ACCOKEEK", "loc" : [ -77.016217, 38.671992 ], "pop" : 4043, "state" : "MD" }
+{ "_id" : "20608", "city" : "AQUASCO", "loc" : [ -76.714947, 38.582496 ], "pop" : 939, "state" : "MD" }
+{ "_id" : "20609", "city" : "AVENUE", "loc" : [ -76.746553, 38.282624 ], "pop" : 699, "state" : "MD" }
+{ "_id" : "20611", "city" : "BEL ALTON", "loc" : [ -76.978873, 38.473141 ], "pop" : 582, "state" : "MD" }
+{ "_id" : "20613", "city" : "BRANDYWINE", "loc" : [ -76.832033, 38.692203 ], "pop" : 7627, "state" : "MD" }
+{ "_id" : "20615", "city" : "BROOMES ISLAND", "loc" : [ -76.547763, 38.417963 ], "pop" : 404, "state" : "MD" }
+{ "_id" : "20616", "city" : "BRYANS ROAD", "loc" : [ -77.076589, 38.641468 ], "pop" : 3792, "state" : "MD" }
+{ "_id" : "20617", "city" : "BRYANTOWN", "loc" : [ -76.846539, 38.542638 ], "pop" : 722, "state" : "MD" }
+
+6.Display the cities population greater than 4000
+> db.cities.find({pop:{$gt:4000}})
+{ "_id" : "01001", "city" : "AGAWAM", "loc" : [ -72.622739, 42.070206 ], "pop" : 15338, "state" : "MA" }
+{ "_id" : "01002", "city" : "CUSHMAN", "loc" : [ -72.51565, 42.377017 ], "pop" : 36963, "state" : "MA" }
+{ "_id" : "01005", "city" : "BARRE", "loc" : [ -72.108354, 42.409698 ], "pop" : 23000, "state" : "MA" }
+{ "_id" : "01007", "city" : "BELCHERTOWN", "loc" : [ -72.410953, 42.275103 ], "pop" : 10579, "state" : "MA" }
+{ "_id" : "01028", "city" : "EAST LONGMEADOW", "loc" : [ -72.505565, 42.067203 ], "pop" : 13367, "state" : "MA" }
+{ "_id" : "01030", "city" : "FEEDING HILLS", "loc" : [ -72.675077, 42.07182 ], "pop" : 11985, "state" : "MA" }
+{ "_id" : "01033", "city" : "GRANBY", "loc" : [ -72.520001, 42.255704 ], "pop" : 5526, "state" : "MA" }
+{ "_id" : "01035", "city" : "HADLEY", "loc" : [ -72.571499, 42.36062 ], "pop" : 4231, "state" : "MA" }
+{ "_id" : "01036", "city" : "HAMPDEN", "loc" : [ -72.431823, 42.064756 ], "pop" : 4709, "state" : "MA" }
+{ "_id" : "01040", "city" : "HOLYOKE", "loc" : [ -72.626193, 42.202007 ], "pop" : 43704, "state" : "MA" }
+{ "_id" : "01056", "city" : "LUDLOW", "loc" : [ -72.471012, 42.172823 ], "pop" : 18820, "state" : "MA" }
+{ "_id" : "01057", "city" : "MONSON", "loc" : [ -72.319634, 42.101017 ], "pop" : 8194, "state" : "MA" }
+{ "_id" : "01060", "city" : "FLORENCE", "loc" : [ -72.654245, 42.324662 ], "pop" : 27939, "state" : "MA" }
+{ "_id" : "01069", "city" : "PALMER", "loc" : [ -72.328785, 42.176233 ], "pop" : 9778, "state" : "MA" }
+{ "_id" : "01073", "city" : "SOUTHAMPTON", "loc" : [ -72.719381, 42.224697 ], "pop" : 4478, "state" : "MA" }
+{ "_id" : "01075", "city" : "SOUTH HADLEY", "loc" : [ -72.581137, 42.237537 ], "pop" : 16699, "state" : "MA" }
+{ "_id" : "01077", "city" : "SOUTHWICK", "loc" : [ -72.770588, 42.051099 ], "pop" : 7667, "state" : "MA" }
+{ "_id" : "01082", "city" : "WARE", "loc" : [ -72.258285, 42.261831 ], "pop" : 9808, "state" : "MA" }
+{ "_id" : "01085", "city" : "MONTGOMERY", "loc" : [ -72.754318, 42.129484 ], "pop" : 40117, "state" : "MA" }
+{ "_id" : "01089", "city" : "WEST SPRINGFIELD", "loc" : [ -72.641109, 42.115066 ], "pop" : 27537, "state" : "MA" }
+Type "it" for more
+
+7.Display all the cities in NH population greater than 20000
+> db.cities.find({state:"NH"})
+{ "_id" : "03031", "city" : "AMHERST", "loc" : [ -71.607536, 42.856944 ], "pop" : 18998, "state" : "NH" }
+{ "_id" : "03032", "city" : "AUBURN", "loc" : [ -71.344892, 42.992529 ], "pop" : 14085, "state" : "NH" }
+{ "_id" : "03033", "city" : "BROOKLINE", "loc" : [ -71.666254, 42.738442 ], "pop" : 12410, "state" : "NH" }
+{ "_id" : "03034", "city" : "CANDIA", "loc" : [ -71.304857, 43.058514 ], "pop" : 13557, "state" : "NH" }
+{ "_id" : "03036", "city" : "CHESTER", "loc" : [ -71.244962, 42.967756 ], "pop" : 12691, "state" : "NH" }
+{ "_id" : "03037", "city" : "DEERFIELD", "loc" : [ -71.251264, 43.137756 ], "pop" : 13124, "state" : "NH" }
+{ "_id" : "03038", "city" : "DERRY", "loc" : [ -71.301971, 42.887404 ], "pop" : 39556, "state" : "NH" }
+{ "_id" : "03042", "city" : "EPPING", "loc" : [ -71.076367, 43.041052 ], "pop" : 16797, "state" : "NH" }
+{ "_id" : "03043", "city" : "FRANCESTOWN", "loc" : [ -71.81131, 42.991952 ], "pop" : 11219, "state" : "NH" }
+{ "_id" : "03044", "city" : "FREMONT", "loc" : [ -71.121836, 42.984016 ], "pop" : 23000, "state" : "NH" }
+
+> db.cities.find({$and:[{state:"NH"},{pop:{$gt:20000}}]})
+{ "_id" : "03038", "city" : "DERRY", "loc" : [ -71.301971, 42.887404 ], "pop" : 39556, "state" : "NH" }
+{ "_id" : "03044", "city" : "FREMONT", "loc" : [ -71.121836, 42.984016 ], "pop" : 23000, "state" : "NH" }
+
+8.Display all the cities with name starting with B
+> db.cities.find({city:/^B/});
+{ "_id" : "01005", "city" : "BARRE", "loc" : [ -72.108354, 42.409698 ], "pop" : 23000, "state" : "MA" }
+{ "_id" : "01007", "city" : "BELCHERTOWN", "loc" : [ -72.410953, 42.275103 ], "pop" : 10579, "state" : "MA" }
+{ "_id" : "01008", "city" : "BLANDFORD", "loc" : [ -72.936114, 42.182949 ], "pop" : 1240, "state" : "MA" }
+{ "_id" : "01223", "city" : "BECKET", "loc" : [ -73.120325, 42.359363 ], "pop" : 1070, "state" : "MA" }
+{ "_id" : "01338", "city" : "BUCKLAND", "loc" : [ -72.764124, 42.615174 ], "pop" : 16, "state" : "MA" }
+{ "_id" : "01436", "city" : "BALDWINVILLE", "loc" : [ -72.064647, 42.593568 ], "pop" : 4386, "state" : "MA" }
+{ "_id" : "01503", "city" : "BERLIN", "loc" : [ -71.635634, 42.384438 ], "pop" : 2293, "state" : "MA" }
+{ "_id" : "01504", "city" : "BLACKSTONE", "loc" : [ -71.52691, 42.028708 ], "pop" : 8023, "state" : "MA" }
+{ "_id" : "01505", "city" : "BOYLSTON", "loc" : [ -71.731042, 42.337727 ], "pop" : 3517, "state" : "MA" }
+{ "_id" : "01506", "city" : "BROOKFIELD", "loc" : [ -72.098887, 42.199141 ], "pop" : 2968, "state" : "MA" }
+{ "_id" : "01719", "city" : "BOXBORO", "loc" : [ -71.518229, 42.486876 ], "pop" : 3343, "state" : "MA" }
+{ "_id" : "01730", "city" : "BEDFORD", "loc" : [ -71.276796, 42.484287 ], "pop" : 16147, "state" : "MA" }
+{ "_id" : "01740", "city" : "BOLTON", "loc" : [ -71.607593, 42.436523 ], "pop" : 3134, "state" : "MA" }
+{ "_id" : "01803", "city" : "BURLINGTON", "loc" : [ -71.200437, 42.508942 ], "pop" : 23093, "state" : "MA" }
+{ "_id" : "01821", "city" : "BILLERICA", "loc" : [ -71.251754, 42.551874 ], "pop" : 28899, "state" : "MA" }
+{ "_id" : "01835", "city" : "BRADFORD", "loc" : [ -71.08549, 42.758597 ], "pop" : 12078, "state" : "MA" }
+{ "_id" : "01915", "city" : "BEVERLY", "loc" : [ -70.875939, 42.560825 ], "pop" : 38259, "state" : "MA" }
+{ "_id" : "01921", "city" : "BOXFORD", "loc" : [ -71.011372, 42.679719 ], "pop" : 6249, "state" : "MA" }
+{ "_id" : "01922", "city" : "BYFIELD", "loc" : [ -70.935053, 42.756792 ], "pop" : 2006, "state" : "MA" }
+{ "_id" : "02019", "city" : "BELLINGHAM", "loc" : [ -71.476829, 42.074573 ], "pop" : 14873, "state" : "MA" }
+Type "it" for more
+
+9.Display the unique city name.
+> db.cities.distinct("city")
+[
+        "ABINGTON",
+        "ACCOKEEK",
+        "ACTON",
+        "ACUSHNET",
+        "ADAMS",
+        "AGAWAM",
+        "ALBUQUERQUE",
+        "ALFRED",
+        "ALLEN PARK",
+        "ALLIGATOR",
+        "ALLSTON",
+        "ALOHA",
+        "AMESBURY",
+        "AMHERST",
+        "ANATONE",
+        "ANCHORAGE",
+        "ANDOVER",
+        "ANGUILLA",
+        "ANN ARBOR",
+        "ANTELOPE",
+        "AQUASCO",
+        "ARLINGTON",
+        "ARVADA",
+        "ASHAWAY",
+        "ASHBURNHAM",
+        "ASHBY",
+        "ASHFIELD",
+        "ASHLAND",
+        "ASHLEY FALLS",
+        "ASHTON",
+        "ASOTIN",
+        "ASSONET",
+        "ATTLEBORO",
+        "AUBURN",
+        "AUBURNDALE",
+        "AURORA",
+        "AUTO",
+        "AVENEL",
+        "AVENUE",
+        "AVON",
+        "AYER",
+        "BADEN",
+        "BAILEY ISLAND",
+        "BAILEYS CROSSROA",
+        "BAKERSTOWN",
+        "BALDWINVILLE",
+        "BALLARD",
+        "BALLENGEE",
+        "BARNSTABLE",
+        "BARRE",
+        "BARRINGTON",
+        "BARTOW",
+        "BASS RIVER",
+        "BAYONNE",
+        "BEAVER",
+        "BEAVERCREEK",
+        "BEAVERTON",
+        "BECKET",
+        "BEDFORD",
+        "BEL ALTON",
+        "BELCHERTOWN",
+        "BELLEVILLE",
+        "BELLINGHAM",
+        "BELMONT",
+        "BENOIT",
+        "BERKLEY",
+        "BERLIN",
+        "BERWICK",
+        "BEULAH",
+        "BEVERLY",
+        "BILLERICA",
+        "BLACKSTONE",
+        "BLANDFORD",
+        "BLOCK ISLAND",
+        "BLOOMFIELD",
+        "BOLTON",
+        "BOONTON",
+        "BORING",
+        "BOSQUE FARMS",
+        "BOSTON",
+        "BOSTON COLLEGE",
+        "BOXBORO",
+        "BOXFORD",
+        "BOYLE",
+        "BOYLSTON",
+        "BOZOO",
+        "BRACKENRIDGE",
+        "BRADFORD",
+        "BRADFORDWOODS",
+        "BRAINTREE",
+        "BRANDYWINE",
+        "BRAYTON",
+        "BREWSTER",
+        "BRIDGEVILLE",
+        "BRIDGEWATER",
+        "BRIGHTON",
+        "BRISTOL",
+        "BROCKTON",
+        "BROOKFIELD",
+        "BROOKLINE",
+        "BROOMES ISLAND",
+        "BROWNSVILLE",
+        "BRYANS ROAD",
+        "BRYANTOWN",
+        "BUCKEYE",
+        "BUCKLAND",
+        "BUENA VISTA",
+        "BULGER",
+        "BURLINGTON",
+        "BUSSEY",
+        "BYFIELD",
+        "CALDWELL",
+        "CAMBRIDGE",
+        "CANAAN",
+        "CANDIA",
+        "CANTON",
+        "CANTON CENTER",
+        "CAPE NEDDICK",
+        "CARLISLE",
+        "CARTERET",
+        "CARVER",
+        "CASEY",
+        "CEDAR GROVE",
+        "CENTERVILLE",
+        "CHAPMANSBORO",
+        "CHARITON",
+        "CHARLEROI",
+        "CHARLESTOWN",
+        "CHARLOTTE",
+        "CHARLTON",
+        "CHELSEA",
+        "CHEPACHET",
+        "CHERRY VALLEY",
+        "CHESHIRE",
+        "CHESTER",
+        "CHILMARK",
+        "CHRISTIANA",
+        "CHURDAN",
+        "CLARKSBURG",
+        "CLARKSTON",
+        "CLARKSVILLE",
+        "CLAYVILLE",
+        "CLEMONS",
+        "CLEVELAND",
+        "CLIFFSIDE PARK",
+        "CLIFTON",
+        "CLINTON",
+        "CLINTONVILLE",
+        "COHASSET",
+        "COLEBROOK",
+        "COLLEGE GROVE",
+        "COLLINSVILLE",
+        "COLOGNE",
+        "COLRAIN",
+        "COLTER BAY",
+        "CONCORD",
+        "CONWAY",
+        "CORINTH",
+        "CORNERSVILLE",
+        "COTTONTOWN",
+        "COTUIT",
+        "COVENTRY",
+        "CRAWLEY",
+        "CUSHMAN",
+        "CUTTYHUNK",
+        "DALLAS",
+        "DALTON",
+        "DANVERS",
+        "DARWIN",
+        "DASSEL",
+        "DAYTON",
+        "DECATUR",
+        "DEDHAM",
+        "DEERFIELD",
+        "DELANO",
+        "DENNIS",
+        "DENNIS PORT",
+        "DERRY",
+        "DIGHTON",
+        "DODDSVILLE",
+        "DORCHESTER",
+        "DOVER",
+        "DRACUT",
+        "DREW",
+        "DRIGGS",
+        "DUBOIS",
+        "DUDLEY",
+        "DUDLEY HILL",
+        "DUNSTABLE",
+        "DUXBURY",
+        "EAST BOSTON",
+        "EAST BRIDGEWATER",
+        "EAST BROOKFIELD",
+        "EAST CAMBRIDGE",
+        "EAST CORINTH",
+        "EAST DOUGLAS",
+        "EAST FREETOWN",
+        "EAST GREENWICH",
+        "EAST LONGMEADOW",
+        "EAST LYNN",
+        "EAST RANDOLPH",
+        "EAST SANDWICH",
+        "EAST TAUNTON",
+        "EAST WALPOLE",
+        "EAST WAREHAM",
+        "EAST WATERTOWN",
+        "EASTHAM",
+        "EDEN VALLEY",
+        "EDGARTOWN",
+        "ELIOT",
+        "ELK RIVER",
+        "ELKTON",
+        "ELLENWOOD",
+        "EPPING",
+        "ERVING",
+        "ESSEX",
+        "EVERETT",
+        "EXCELSIOR",
+        "FAIRFAX",
+        "FAIRFAX STATION",
+        "FAIRFIELD",
+        "FAIRHAVEN",
+        "FAIROAKS",
+        "FAIRVIEW",
+        "FALL RIVER",
+        "FALMOUTH",
+        "FEEDING HILLS",
+        "FELT",
+        "FISHERS ISLAND",
+        "FISKDALE",
+        "FITCHBURG",
+        "FLANDREAU",
+        "FLORENCE",
+        "FOREST PARK",
+        "FORESTDALE",
+        "FORT MOTTE",
+        "FOXBORO",
+        "FRAMINGHAM",
+        "FRANCESTOWN",
+        "FRANKLIN",
+        "FREDERICA",
+        "FREEMAN",
+        "FREMONT",
+        "FRENCH VILLAGE",
+        "FT DEVENS",
+        "GARDNER",
+        "GARRETSON",
+        "GAYVILLE",
+        "GEORGETOWN",
+        "GERALD",
+        "GILBERTVILLE",
+        "GLENCOE",
+        "GLOUCESTER",
+        "GOSHEN",
+        "GRAFTON",
+        "GRANBY",
+        "GRANITEVILLE",
+        "GRAY SUMMIT",
+        "GREAT BARRINGTON",
+        "GREENVILLE",
+        "GREENWOOD",
+        "GRETNA",
+        "GROTON",
+        "GROVELAND",
+        "GROVER",
+        "HADLEY",
+        "HAHNVILLE",
+        "HALIFAX",
+        "HAMER",
+        "HAMILTON",
+        "HAMPDEN",
+        "HANCOCK",
+        "HANNAH",
+        "HANOVER",
+        "HANSON",
+        "HARBESON",
+        "HARDIN",
+        "HARRINGTON",
+        "HARRISBURG",
+        "HARTFORD",
+        "HARTLY",
+        "HARVARD",
+        "HARVEY",
+        "HARWICH",
+        "HARWICH PORT",
+        "HATFIELD",
+        "HATTON",
+        "HAVERHILL",
+        "HAWLEY",
+        "HAYDENVILLE",
+        "HAZELWOOD",
+        "HEATH",
+        "HENSEL",
+        "HIGHLAND",
+        "HILLSDALE",
+        "HINGHAM",
+        "HOLBROOK",
+        "HOLDEN",
+        "HOLLAND",
+        "HOLLISTON",
+        "HOLYOKE",
+        "HONEYFORD",
+        "HONOLULU",
+        "HOOPLE",
+        "HOPEDALE",
+        "HOPKINTON",
+        "HOUSATONIC",
+        "HOUSTON",
+        "HUBBARDSTON",
+        "HUDSON",
+        "HULL",
+        "HUNTINGTON",
+        "HUNTLEY",
+        "HURON",
+        "HYDE PARK",
+        "HYSHAM",
+        "INDIAN ORCHARD",
+        "INGOMAR",
+        "IONA",
+        "IPSWICH",
+        "JAMAICA PLAIN",
+        "JEFFERSON",
+        "JONES",
+        "KELLY",
+        "KEMMERER",
+        "KENNER",
+        "KINGSTON",
+        "KITTERY",
+        "KITTERY POINT",
+        "LA CYGNE",
+        "LAFITTE",
+        "LAKEVILLE",
+        "LAME DEER",
+        "LANCASTER",
+        "LANE",
+        "LANSING",
+        "LAS VEGAS",
+        "LAUREL",
+        "LAWRENCE",
+        "LEE",
+        "LEEDS",
+        "LEICESTER",
+        "LENOX",
+        "LEOMINSTER",
+        "LEVERETT",
+        "LEWES",
+        "LEXINGTON",
+        "LEYDEN",
+        "LINCOLN",
+        "LINDSAY",
+        "LITHIA SPRINGS",
+        "LITHONIA",
+        "LITTLETON",
+        "LONG NECK",
+        "LONGMEADOW",
+        "LOOKEBA",
+        "LOS ANGELES",
+        "LOWDEN",
+        "LOWELL",
+        "LUDLOW",
+        "LUNENBURG",
+        "LUTHER",
+        "LYNN",
+        "LYNNFIELD",
+        "MACARTHUR",
+        "MADISON",
+        "MAGNOLIA",
+        "MALDEN",
+        "MANCHESTER",
+        "MANSFIELD",
+        "MARBLEHEAD",
+        "MARION",
+        "MARLBOROUGH",
+        "MARLOW",
+        "MARSHALL",
+        "MARSHFIELD",
+        "MARSTONS MILLS",
+        "MARYDEL",
+        "MARYLAND HEIGHTS",
+        "MASHPEE",
+        "MATTAPAN",
+        "MATTAPOISETT",
+        "MAUD",
+        "MAYNARD",
+        "MAYODAN",
+        "MAYSVILLE",
+        "MC GAW PARK",
+        "MEDFIELD",
+        "MEDFORD",
+        "MEDWAY",
+        "MELROSE",
+        "MENDON",
+        "MERRIMAC",
+        "MESA",
+        "MESQUITE",
+        "METHUEN",
+        "MIDDLEBORO",
+        "MIDDLEFIELD",
+        "MIDDLETON",
+        "MILDRED",
+        "MILFORD",
+        "MILLBURY",
+        "MILLERS FALLS",
+        "MILLIS",
+        "MILLVILLE",
+        "MILTON",
+        "MOCKSVILLE",
+        "MONROE",
+        "MONSON",
+        "MONTAGUE",
+        "MONTGOMERY",
+        "MOOSE",
+        "MORAN",
+        "MOSBY",
+        "MOUNT AIRY",
+        "MOUNT CALVARY",
+        "NAHANT",
+        "NANTUCKET",
+        "NASH",
+        "NASHOTAH",
+        "NATICK",
+        "NEEDHAM",
+        "NEOSHO",
+        "NEW BEDFORD",
+        "NEW BRAINTREE",
+        "NEW HOLSTEIN",
+        "NEW SALEM",
+        "NEW YORK",
+        "NEWARK",
+        "NEWBURY",
+        "NEWBURYPORT",
+        "NEWTON",
+        "NEWTON CENTER",
+        "NEWTON HIGHLANDS",
+        "NEWTON UPPER FAL",
+        "NEWTONVILLE",
+        "NORFOLK",
+        "NORTH ANDOVER",
+        "NORTH ATTLEBORO",
+        "NORTH BERWICK",
+        "NORTH BILLERICA",
+        "NORTH BROOKFIELD",
+        "NORTH CAMBRIDGE",
+        "NORTH CHATHAM",
+        "NORTH CHELMSFORD",
+        "NORTH DARTMOUTH",
+        "NORTH DIGHTON",
+        "NORTH EASTON",
+        "NORTH FALMOUTH",
+        "NORTH GRAFTON",
+        "NORTH LEWISBURG",
+        "NORTH OXFORD",
+        "NORTH READING",
+        "NORTH TRURO",
+        "NORTH WALTHAM",
+        "NORTHBOROUGH",
+        "NORTHBRIDGE",
+        "NORTHFIELD",
+        "NORTON",
+        "NORWELL",
+        "NORWOOD",
+        "OAKFIELD",
+        "OAKHAM",
+        "OCONOMOWOC",
+        "OGUNQUIT",
+        "OKAUCHEE",
+        "ONSET",
+        "ORLEANS",
+        "OSTERVILLE",
+        "OSTRANDER",
+        "OTIS",
+        "OTIS A F B",
+        "OXFORD",
+        "PADANARAM VILLAG",
+        "PALMER",
+        "PARIS",
+        "PATASKALA",
+        "PAXTON",
+        "PEABODY",
+        "PEMBROKE",
+        "PENDER",
+        "PEPPERELL",
+        "PERU",
+        "PETERSHAM",
+        "PFAFFTOWN",
+        "PILOT MOUNTAIN",
+        "PIMMIT",
+        "PINE HALL",
+        "PINEWOOD",
+        "PINNACLE",
+        "PITTSFIELD",
+        "PLAIN CITY",
+        "PLAINFIELD",
+        "PLAINVILLE",
+        "PLATTSMOUTH",
+        "PLYMOUTH",
+        "PLYMPTON",
+        "POCASSET",
+        "POMARIA",
+        "PRAGUE",
+        "PRINCETON",
+        "PROSPERITY",
+        "PROVINCETOWN",
+        "QUINCY",
+        "RACINE",
+        "RADNOR",
+        "RANDOLPH",
+        "RAYNHAM",
+        "READING",
+        "REHOBOTH",
+        "REMBERT",
+        "REVERE",
+        "RICHFIELD",
+        "RICHMOND",
+        "RIDGE SPRING",
+        "RIDGEWAY",
+        "RIMINI",
+        "ROCHDALE",
+        "ROCHESTER",
+        "ROCKLAND",
+        "ROCKPORT",
+        "ROOSEVELT",
+        "ROSALIE",
+        "ROSLINDALE",
+        "ROSTRAVER",
+        "ROWE",
+        "ROWESVILLE",
+        "ROWLEY",
+        "ROXBURY",
+        "ROYAL CITY",
+        "ROYSE CITY",
+        "RURAL HALL",
+        "RUSSELL",
+        "RUTLAND",
+        "RYEGATE",
+        "SAINT AUGUSTINE",
+        "SAINT CHARLES",
+        "SAINT FRANCIS",
+        "SALEM",
+        "SALISBURY",
+        "SANDERSON",
+        "SANDISFIELD",
+        "SANDWICH",
+        "SANDY RIDGE",
+        "SAUGUS",
+        "SAVOY",
+        "SCITUATE",
+        "SCRIBNER",
+        "SEEKONK",
+        "SHARON",
+        "SHARPSVILLE",
+        "SHAWNEE HILLS",
+        "SHEFFIELD",
+        "SHELBURNE FALLS",
+        "SHELBYVILLE",
+        "SHERBORN",
+        "SHERIDAN",
+        "SHIRLEY CENTER",
+        "SHREWSBURY",
+        "SHUTESBURY",
+        "SILESIA",
+        "SIMPSONVILLE",
+        "SKOKIE",
+        "SMITHFIELD",
+        "SOMERSET",
+        "SOMERVILLE",
+        "SOUTH BERWICK",
+        "SOUTH BOSTON",
+        "SOUTH CHATHAM",
+        "SOUTH CHELMSFORD",
+        "SOUTH DEERFIELD",
+        "SOUTH DENNIS",
+        "SOUTH EASTON",
+        "SOUTH EGREMONT",
+        "SOUTH GRAFTON",
+        "SOUTH HADLEY",
+        "SOUTH HAMILTON",
+        "SOUTH WALPOLE",
+        "SOUTHAMPTON",
+        "SOUTHBOROUGH",
+        "SOUTHBRIDGE",
+        "SOUTHFIELD",
+        "SOUTHWICK",
+        "SPENCER",
+        "SPRING GROVE",
+        "SPRINGFIELD",
+        "STARKE",
+        "STERLING",
+        "STERRETT",
+        "STOCKBRIDGE",
+        "STOCKTON",
+        "STONEHAM",
+        "STONY BOTTOM",
+        "STOUGHTON",
+        "STOW",
+        "STURBRIDGE",
+        "SUDBURY",
+        "SULPHUR",
+        "SUMITON",
+        "SUMMITVILLE",
+        "SUNDERLAND",
+        "SWAMPSCOTT",
+        "SWANSEA",
+        "SYLACAUGA",
+        "SYRACUSE",
+        "TABIONA",
+        "TALLADEGA",
+        "TALMAGE",
+        "TAUNTON",
+        "TAYLORSVILLE",
+        "TEATICKET",
+        "TECHNY",
+        "TEMPLETON",
+        "TERRYTOWN",
+        "TEWKSBURY",
+        "THORNTOWN",
+        "THORSBY",
+        "THREE RIVERS",
+        "TIPTON",
+        "TOLLAND",
+        "TOOELE",
+        "TOPSFIELD",
+        "TOWNSEND",
+        "TRAFFORD",
+        "TRIDELL",
+        "TROY",
+        "TRURO",
+        "TRUSSVILLE",
+        "TURNERS FALLS",
+        "TURNERS STATION",
+        "TYNGSBORO",
+        "UNION GROVE",
+        "UXBRIDGE",
+        "VANDIVER",
+        "VILLAGE OF NAGOG",
+        "VINEYARD HAVEN",
+        "W TOWNSEND",
+        "WABAN",
+        "WADSWORTH",
+        "WAITSBURG",
+        "WAKEFIELD",
+        "WALES",
+        "WALLA WALLA",
+        "WALPOLE",
+        "WARE",
+        "WAREHAM",
+        "WARREN",
+        "WASHTUCNA",
+        "WATSON",
+        "WAUCONDA",
+        "WAYLAND",
+        "WELLBORN",
+        "WELLESLEY",
+        "WELLFLEET",
+        "WENDELL",
+        "WENHAM",
+        "WEST BARNSTABLE",
+        "WEST BOYLSTON",
+        "WEST BRIDGEWATER",
+        "WEST BROOKFIELD",
+        "WEST CALDWELL",
+        "WEST DENNIS",
+        "WEST GREENWICH",
+        "WEST HARWICH",
+        "WEST LYNN",
+        "WEST NEWBURY",
+        "WEST OTIS",
+        "WEST ROXBURY",
+        "WEST SPRINGFIELD",
+        "WEST STOCKBRIDGE",
+        "WEST TISBURY",
+        "WEST UPTON",
+        "WEST WAREHAM",
+        "WEST WARREN",
+        "WEST YARMOUTH",
+        "WESTBOROUGH",
+        "WESTFIELD",
+        "WESTMINSTER",
+        "WESTON",
+        "WESTPORT",
+        "WESTWOOD",
+        "WEYMOUTH",
+        "WHITE SPRINGS",
+        "WHITINSVILLE",
+        "WHITMAN",
+        "WILBRAHAM",
+        "WILKINSONVILLE",
+        "WILLIAMSBURG",
+        "WILLIAMSTOWN",
+        "WILMAR",
+        "WILMINGTON",
+        "WILMOT",
+        "WILSON",
+        "WINCHENDON",
+        "WINCHESTER",
+        "WINDSOR",
+        "WINDSORVILLE",
+        "WINTHROP",
+        "WOBURN",
+        "WOODS HOLE",
+        "WORCESTER",
+        "WORTHINGTON",
+        "WRENTHAM",
+        "YARMOUTH PORT",
+        "YORK",
+        "YORKTOWN",
+        "YULEE"
+]
+
+10.Display total number of cities in the collection.
+> db.cities.distinct("city").length
+707
+
+11.Display all cities in ascending order of population
+> db.cities.find({},{_id:0,city:1,pop:1}).sort({pop:1})
+{ "city" : "CLAYVILLE", "pop" : -1955 }
+{ "city" : "BLOCK ISLAND", "pop" : -1164 }
+{ "city" : "RICHMOND", "pop" : -989 }
+{ "city" : "CAMBRIDGE", "pop" : 0 }
+{ "city" : "ANN ARBOR", "pop" : 0 }
+{ "city" : "LAFITTE", "pop" : 0 }
+{ "city" : "BUCKLAND", "pop" : 16 }
+{ "city" : "SAINT FRANCIS", "pop" : 39 }
+{ "city" : "FELT", "pop" : 40 }
+{ "city" : "ASOTIN", "pop" : 89 }
+{ "city" : "MONROE", "pop" : 97 }
+{ "city" : "CUTTYHUNK", "pop" : 98 }
+{ "city" : "INGOMAR", "pop" : 118 }
+{ "city" : "HENSEL", "pop" : 121 }
+{ "city" : "GOSHEN", "pop" : 122 }
+{ "city" : "ANTELOPE", "pop" : 129 }
+{ "city" : "SOUTH EGREMONT", "pop" : 135 }
+{ "city" : "HAMILTON", "pop" : 135 }
+{ "city" : "HANNAH", "pop" : 141 }
+{ "city" : "ANATONE", "pop" : 141 }
+Type "it" for more
+
+12.list all cities that lie between longitude 10 to 30
+> db.cities.find({"loc.1":{$gte:10,$lte:30}},{city:1,_id:0,state:1,loc:1})
+{ "city" : "SAINT AUGUSTINE", "loc" : [ -81.298367, 29.880457 ], "state" : "FL" }
+{ "city" : "SAINT AUGUSTINE", "loc" : [ -81.323734, 29.828514 ], "state" : "FL" }
+{ "city" : "STARKE", "loc" : [ -82.118518, 29.958299 ], "state" : "FL" }
+{ "city" : "SAINT AUGUSTINE", "loc" : [ -81.526379, 29.947511 ], "state" : "FL" }
+{ "city" : "SAINT AUGUSTINE", "loc" : [ -81.347626, 29.905726 ], "state" : "FL" }
+{ "city" : "GRETNA", "loc" : [ -90.053115, 29.910806 ], "state" : "LA" }
+{ "city" : "TERRYTOWN", "loc" : [ -90.029123, 29.892652 ], "state" : "LA" }
+{ "city" : "HARVEY", "loc" : [ -90.067259, 29.872535 ], "state" : "LA" }
+{ "city" : "KENNER", "loc" : [ -90.247901, 29.991203 ], "state" : "LA" }
+{ "city" : "LAFITTE", "loc" : [ -90.056633, 29.562194 ], "state" : "LA" }
+{ "city" : "HONOLULU", "loc" : [ -157.875947, 21.34877 ], "state" : "HI" }
+{ "city" : "HONOLULU", "loc" : [ -157.755242, 21.292811 ], "state" : "HI" }
+{ "city" : "HONOLULU", "loc" : [ -157.829819, 21.311704 ], "state" : "HI" }
+{ "city" : "HONOLULU", "loc" : [ -157.698523, 21.298684 ], "state" : "HI" }
+{ "city" : "HONOLULU", "loc" : [ -157.828388, 21.294139 ], "state" : "HI" }
+
+13.list all cities which belong to "MA"
+> db.cities.find({state:"MA"},{_id:0,city:1})
+{ "city" : "AGAWAM" }
+{ "city" : "CUSHMAN" }
+{ "city" : "BARRE" }
+{ "city" : "BELCHERTOWN" }
+{ "city" : "BLANDFORD" }
+{ "city" : "EAST LONGMEADOW" }
+{ "city" : "FEEDING HILLS" }
+{ "city" : "GILBERTVILLE" }
+{ "city" : "GOSHEN" }
+{ "city" : "GRANBY" }
+{ "city" : "TOLLAND" }
+{ "city" : "HADLEY" }
+{ "city" : "HAMPDEN" }
+{ "city" : "HATFIELD" }
+{ "city" : "HAYDENVILLE" }
+{ "city" : "HOLYOKE" }
+{ "city" : "HUNTINGTON" }
+{ "city" : "LEEDS" }
+{ "city" : "LEVERETT" }
+{ "city" : "LUDLOW" }
+Type "it" for more
+
+14.List all cities with population between 20000 to 50000
+> db.cities.find({$and:[{pop:{$gt:20000}},{pop:{$lt:30000}}]})
+{ "_id" : "01005", "city" : "BARRE", "loc" : [ -72.108354, 42.409698 ], "pop" : 23000, "state" : "MA" }
+{ "_id" : "01060", "city" : "FLORENCE", "loc" : [ -72.654245, 42.324662 ], "pop" : 27939, "state" : "MA" }
+{ "_id" : "01089", "city" : "WEST SPRINGFIELD", "loc" : [ -72.641109, 42.115066 ], "pop" : 27537, "state" : "MA" }
+{ "_id" : "01104", "city" : "SPRINGFIELD", "loc" : [ -72.577769, 42.128848 ], "pop" : 22115, "state" : "MA" }
+{ "_id" : "01108", "city" : "SPRINGFIELD", "loc" : [ -72.558432, 42.085314 ], "pop" : 25519, "state" : "MA" }
+{ "_id" : "01440", "city" : "GARDNER", "loc" : [ -71.9898, 42.57405 ], "pop" : 20125, "state" : "MA" }
+{ "_id" : "01545", "city" : "SHREWSBURY", "loc" : [ -71.720503, 42.284801 ], "pop" : 24146, "state" : "MA" }
+{ "_id" : "01571", "city" : "DUDLEY", "loc" : [ -71.893228, 42.048894 ], "pop" : 22001, "state" : "MA" }
+{ "_id" : "01604", "city" : "WORCESTER", "loc" : [ -71.774626, 42.254084 ], "pop" : 29036, "state" : "MA" }
+{ "_id" : "01605", "city" : "WORCESTER", "loc" : [ -71.788795, 42.289391 ], "pop" : 25695, "state" : "MA" }
+{ "_id" : "01609", "city" : "WORCESTER", "loc" : [ -71.817456, 42.275387 ], "pop" : 21905, "state" : "MA" }
+{ "_id" : "01610", "city" : "WORCESTER", "loc" : [ -71.810798, 42.249186 ], "pop" : 23720, "state" : "MA" }
+{ "_id" : "01757", "city" : "MILFORD", "loc" : [ -71.527402, 42.151142 ], "pop" : 25372, "state" : "MA" }
+{ "_id" : "01803", "city" : "BURLINGTON", "loc" : [ -71.200437, 42.508942 ], "pop" : 23093, "state" : "MA" }
+{ "_id" : "01810", "city" : "ANDOVER", "loc" : [ -71.156481, 42.64956 ], "pop" : 29161, "state" : "MA" }
+{ "_id" : "01821", "city" : "BILLERICA", "loc" : [ -71.251754, 42.551874 ], "pop" : 28899, "state" : "MA" }
+{ "_id" : "01824", "city" : "SOUTH CHELMSFORD", "loc" : [ -71.357521, 42.59356 ], "pop" : 24457, "state" : "MA" }
+{ "_id" : "01826", "city" : "DRACUT", "loc" : [ -71.318592, 42.676422 ], "pop" : 25594, "state" : "MA" }
+{ "_id" : "01830", "city" : "HAVERHILL", "loc" : [ -71.072057, 42.785605 ], "pop" : 22445, "state" : "MA" }
+{ "_id" : "01843", "city" : "LAWRENCE", "loc" : [ -71.160506, 42.691053 ], "pop" : 22285, "state" : "MA" }
+Type "it" for more
+
+15.create index on cityname.
+> db.cities.createIndex({city:1})
+{
+        "numIndexesBefore" : 1,
+        "numIndexesAfter" : 2,
+        "createdCollectionAutomatically" : false,
+        "ok" : 1
+}
+
+GetIndex
+> db.cities.getIndexes()
+[
+        {
+                "v" : 2,
+                "key" : {
+                        "_id" : 1
+                },
+                "name" : "_id_"
+        },
+        {
+                "v" : 2,
+                "key" : {
+                        "city" : 1
+                },
+                "name" : "city_1"
+        }
+]
+
+drop
+> db.cities.dropIndex({city:1})
+{ "nIndexesWas" : 2, "ok" : 1 }
+
