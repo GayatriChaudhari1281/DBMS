@@ -275,3 +275,30 @@ Type "it" for more
 { "_id" : "NC", "value" : 9917.7 }
 { "_id" : "NM", "value" : 27731.375 }
 { "_id" : "OR", "value" : 19188.428571428572 }
+
+9.Display most top 2 populated cities in each state.
+db.cities.aggregate([
+    {$sort:{state:-1, pop:-1}},
+    {$group:{_id:"$state",items:{$push:{pop:"$pop"}}}}, 
+    {$project:{items:{$slice:["$items", 2]}}}])
+.pretty()
+{ "_id" : "UT", "items" : [ { "pop" : 17588 }, { "pop" : 9737 } ] }
+{ "_id" : "MT", "items" : [ { "pop" : 8328 }, { "pop" : 3889 } ] }
+{ "_id" : "TN", "items" : [ { "pop" : 43296 }, { "pop" : 24920 } ] }
+{ "_id" : "AR", "items" : [ { "pop" : 8828 }, { "pop" : 1293 } ] }
+{ "_id" : "NE", "items" : [ { "pop" : 10387 }, { "pop" : 2961 } ] }
+{ "_id" : "AL", "items" : [ { "pop" : 29778 }, { "pop" : 24424 } ] }
+{ "_id" : "GA", "items" : [ { "pop" : 56056 }, { "pop" : 32312 } ] }
+{ "_id" : "HI", "items" : [ { "pop" : 50584 }, { "pop" : 39632 } ] }
+{ "_id" : "MD", "items" : [ { "pop" : 20663 }, { "pop" : 11184 } ] }
+{ "_id" : "RI", "items" : [ { "pop" : 27842 }, { "pop" : 19625 } ] }
+{ "_id" : "WI", "items" : [ { "pop" : 24795 }, { "pop" : 5536 } ] }
+{ "_id" : "KY", "items" : [ { "pop" : 14843 }, { "pop" : 7048 } ] }
+{ "_id" : "AZ", "items" : [ { "pop" : 55180 }, { "pop" : 40729 } ] }
+{ "_id" : "MO", "items" : [ { "pop" : 21268 }, { "pop" : 20004 } ] }
+{ "_id" : "CO", "items" : [ { "pop" : 45335 }, { "pop" : 37711 } ] }
+{ "_id" : "WY", "items" : [ { "pop" : 9078 }, { "pop" : 4258 } ] }
+{ "_id" : "NY", "items" : [ { "pop" : 100027 }, { "pop" : 74643 } ] }
+{ "_id" : "MI", "items" : [ { "pop" : 47564 }, { "pop" : 41263 } ] }
+{ "_id" : "NJ", "items" : [ { "pop" : 61444 }, { "pop" : 46131 } ] }
+{ "_id" : "MA", "items" : [ { "pop" : 65046 }, { "pop" : 59498 } ] }
